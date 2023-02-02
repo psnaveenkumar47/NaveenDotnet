@@ -1,0 +1,33 @@
+﻿@using TwoTableAssignment.ViewModel
+@model BookRecordsViewModel
+@{
+    ViewBag.Title = "BookView";
+}
+<a href="/Book/AddNew">Add New Book</a>
+<h2>Book View</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetBooks</title>
+</head>
+<body>
+    <div> 
+        <table border="1">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+            </tr>
+            @foreach(BookViewModel item in Model.MyBooks)
+            {
+                <tr>
+                    <td>@item.BookId</td>
+                    <td>@item.BookName</td>
+         </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

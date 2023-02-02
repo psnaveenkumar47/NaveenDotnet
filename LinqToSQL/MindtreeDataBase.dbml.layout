@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MindtreeDataBase">
+  <DataContextMoniker Name="/MindtreeDataBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1be1b4b9-94a4-41d8-9a1b-9af9561906cd" absoluteBounds="3.75, 2.25, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/MindtreeDataBaseDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a255a88-a337-4980-b400-7b8f28ad7cd2" absoluteBounds="3.765, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3664c986-a02c-4efb-836b-55813cb93471" absoluteBounds="1.375, 2, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MindtreeDataBaseDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1ff6417-6eac-4c5a-9865-5960edf2b146" absoluteBounds="1.3900000000000001, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 2.84699625651042); (3.375 : 2.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MindtreeDataBaseDataContext/Department/Department_Employee" />
+      <nodes>
+        <classShapeMoniker Id="1be1b4b9-94a4-41d8-9a1b-9af9561906cd" />
+        <classShapeMoniker Id="3664c986-a02c-4efb-836b-55813cb93471" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

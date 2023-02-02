@@ -1,0 +1,14 @@
+﻿@using HelloMVC.Models
+@{
+    ViewBag.Title = "GetEmployee";
+}
+
+<h2>Get Employee Details</h2>
+<div>
+    @{ 
+        Employee emp = (Employee)ViewData["MyEmployee"];
+    }
+    <b>Employee Details Are:</b></br>
+    Employee Nmae:@emp.FirstName @emp.LastName <br/>
+    @{ Response.Write("Frist Name: " + emp.FirstName + "</br>Last Name: " + emp.LastName + "</br> Salary: " + emp.Salary);}
+</div>

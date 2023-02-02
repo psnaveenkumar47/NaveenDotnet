@@ -1,0 +1,33 @@
+﻿@using TwoTableAssignment.ViewModel
+@model BuyerRecordsViewModel
+@{
+    ViewBag.Title = "BuyerView";
+}
+<a href="/Buyer/AddNew">Add New Buyer</a>
+<h2>Buyer View</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetBuyers</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Buyer ID</th>
+                <th>Buyer Name</th>
+            </tr>
+            @foreach (BuyerViewModel item in Model.MyBuyers)
+            {
+                <tr>
+                    <td>@item.BuyerId</td>
+                    <td>@item.BuyerName</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

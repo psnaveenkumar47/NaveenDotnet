@@ -1,0 +1,28 @@
+﻿@model MVCDataLayer.Models.UserDetails
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Login</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("DoLogin", "Authentication", FormMethod.Post))
+        {
+            @Html.LabelFor(c => c.UserName)
+            @Html.TextBoxFor(x => x.UserName)
+            <br />
+            @Html.LabelFor(c => c.Password)
+            @Html.PasswordFor(x => x.Password)
+            <br />
+            <input type="submit" name="btnsubmit" value="Login" />
+        }
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@using TwoTableAssignment.ViewModel
+@model CreateBuyerViewModel
+@{
+    ViewBag.Title = "CreateBuyer";
+}
+@{
+    Layout = null;
+}
+<h2>CreateBuyer</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateBuyer</title>
+    <script>
+
+        function ResetForm() {
+            document.getElementById('Txtid').value = "";
+            document.getElementById('TxtNmae').value = "";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form action="/Buyer/SaveBuyer" method="post">
+            @*
+                 First Name:<input type="text" id="TxtFName" name="FirstName" value="" /><br />
+                 Last Name:<input type="text" id="TxtLName" name="LastName" value="" /><br />
+                Salary:<input type="text" id="TxtSalary" name="Salary" value="" /><br />
+                 <input type="submit" name="BtnSubmit" value="Save Buyer"/>
+            *@
+
+            <table>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" id="Txtid" name="Id" value="@Model.BuyerId" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        @Html.ValidationMessage("BuyerId");
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" id="TxtName" name="LastNmae" value="@Model.BuyerName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        @Html.ValidationMessage("Buyername");
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="BtnSubmit" value="Save Buyer" />
+                        <input type="submit" name="BtnSubmit" value="Cancel" />
+                        <input type="button" name="BtnReset" value="Reset" onclick="ResetForm();" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

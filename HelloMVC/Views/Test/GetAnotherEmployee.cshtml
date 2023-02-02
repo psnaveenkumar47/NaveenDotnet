@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Get Another Employee";
+}
+
+<h2> Get Another Employee</h2>
+<div>
+    @{ 
+        HelloMVC.Models.Employee emp = ViewBag.MyEmployee;
+        emp.FirstName = "rakesh";
+        emp.LastName = "kumar";
+        emp.Salary = 30000;
+    }
+    <b>Employee Details are:</b><br/>
+    Employee Name:@emp.FirstName @emp.LastName <br />
+    Employee Salary:@emp.Salary.ToString("C");
+</div>

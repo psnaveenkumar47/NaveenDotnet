@@ -1,0 +1,72 @@
+﻿@using TwoTableAssignment.ViewModel
+@model CreateBookViewModel
+@{
+    ViewBag.Title = "CreateBook";
+}
+@{ 
+    Layout = null;
+}
+<h2>CreateBook</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateBook</title>
+    <script>
+
+        function ResetForm() {
+            document.getElementById('TxtId').value = "";
+            document.getElementById('TxtNmae').value = "";
+        }
+    </script>
+</head>
+<body>
+    <div> 
+        <form action="/Book/SaveBook" method="post">
+            @*
+            First Name:<input type="text" id="TxtFName" name="FirstName" value="" /><br />
+            Last Name:<input type="text" id="TxtLName" name="LastName" value="" /><br />
+           Salary:<input type="text" id="TxtSalary" name="Salary" value="" /><br />
+            <input type="submit" name="BtnSubmit" value="Save Book"/>
+                *@
+            
+            <table>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" id="Txtid" name="Id" value="@Model.BookId"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        @Html.ValidationMessage("BookId");
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" id="TxtName" name="LastNmae" value="@Model.BookName"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        @Html.ValidationMessage("Bookname");
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="BtnSubmit" value="Save Book" />
+                        <input type="submit" name="BtnSubmit" value="Cancel" />
+                        <input type="button" name="BtnReset" value="Reset" onclick="ResetForm();" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

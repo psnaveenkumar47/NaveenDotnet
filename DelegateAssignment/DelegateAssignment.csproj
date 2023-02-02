@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="System.Text.Json" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CustomerLibrary">
+      <HintPath>..\CustomerLibrary\bin\Debug\net6.0\CustomerLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DelegateLibrary">
+      <HintPath>..\DelegateLibrary\bin\Debug\net6.0\DelegateLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EmployeeLibrary">
+      <HintPath>..\EmployeeLibrary\bin\Debug\net6.0\EmployeeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Printer">
+      <HintPath>..\Printer\bin\Debug\net6.0\Printer.dll</HintPath>
+    </Reference>
+    <Reference Include="StudentLibrary">
+      <HintPath>..\StudentLibrary\bin\Debug\net6.0\StudentLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
